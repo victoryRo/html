@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms part one</title>
+    <style>
+h2 {
+    color: green;
+}
+    </style>
+</head>
+    <!--
+        La estructura basica de un formulario se compone de 4 elementos 
+
+        form -> la etiqueta que engloba nuestro formulario
+        label -> sirve para escribir el nombre del campo a rellenar
+                 debe tener el atributo (for) al cual se le indica un (id)
+                 que empareja el (label) con su (input) correspondiente.
+        input -> campo de entrada, permite al usuario iteractuar.
+                 el unico atributo obligatorio del input es (name)
+        button -> bot√≤n que permite enviar el formulario
+    -->    
+    <!-- 
+        input type:
+        button         -> Visualmente es igual pero el formulario no se enviara 
+        submit         -> para enviar el formulario
+        date:          -> para introducir fecha
+        datetime       -> obsoleto
+        datetime-local -> fecha hora, no funciona en firefox
+        time           -> para introducir hora
+            TIP
+                *Se recomienda usar datetime-local y time para 
+                seleccionar fecha y hora
+                hidden -> campo oculto, puede contener valor pero no se mostrara
+        month          -> introducir mes
+        week           -> introducir numero de la semana
+    
+        email          -> introducir email
+        password       -> contraseña
+        search         -> se utiliza para las barras de bùsqueda
+        tel            -> para introducir numeros telefonicos
+        url            -> introducir URLs 
+
+        color:         -> para especificar un color
+        number         -> introducir valores numericos
+        range          -> establecer un rango
+        reset          -> para resetear un formulario
+        text           -> valor por default
+
+
+        radio -> Permite seleccionar una unica opcion de una lista 
+                 de opciones seleccionadas.
+        checkbox -> Permite seleccionar varias opciones de una lista
+                    de opciones relacionadas.
+        select -> crea una lista de opciones donde podemos
+                  seleccionar una o varias opciones.
+                  Cada opciòn ira dentro de la etiqueta <option></option> 
+
+        Si tenemos muchas opciones podemos ordenarlas por categorias
+        a travès de la etiqueta <optgroup> con el atributo label
+        para nombrar la categoria.
+    -->
+    <!-- 
+        other form elements: 
+        fielset  -> se utiliza pra agrupar elementos dentro de un formulario
+        legend   -> representa una etiqueta para el contenido del fielsets
+        file     -> este input se utiliza para cargar archivos desde un (form)
+        meter    -> representa un valor dentro de un rango conocido
+        progress -> representa el progreso de una tarea 
+        textarea -> se utiliza para introducir un texto largo en un formulario
+    -->
+    <!-- 
+        algunos atributos de formularios:
+        placeholder -> muestra que dato se debe introducir
+        required    -> hace que un campo sea obligatorio
+        readonly    -> hace que un campo sea de solo lectura
+        disabled    -> desactiva el campo, no se podra escribir en el 
+        autofocus   -> para autoenfocar el campo por defecto
+        min - max   -> establece el minimo y maximo de un campo numerico
+        selected    -> equivale a checked en los select, sirve para establecer 
+                       una opcion por defecto
+        maxlength - minlength -> establece el minimo y maximo de caracteres
+                                 e un campo de texto
+    -->
+<body>
+    <!-- form basic -->
+    <h2>input basic</h2>
+    <form>
+        <label for="name">Name</label>
+        <input id="name">
+        <button>Send form</button>
+    </form>
+    <br><hr>
+
+    <!-- submit -->
+    <h2>input submit</h2>
+    <form>
+        <input type="text">
+        <input type="submit" value="Send input">
+        <button>Send</button>
+    </form>
+    <br><hr>
+
+    <!-- date -->
+    <h2>input date</h2>
+    <form>
+        <input type="date"> date
+        <br>
+        <input type="datetime-local"> datetime-local
+        <br>
+        <!-- recomendacion todos los navegadores -->
+        <input type="date"> date
+        <input type="time"> time
+        <!-- until here -->
+        <br>
+        <input type="month"> month
+        <br>
+        <input type="week"> week
+    </form>
+    <br><hr>
+
+    <!-- input movil different -->
+    <h2>inputs different</h2>
+    <form>
+        <div>
+            <label for="buscar"></label> Buscar
+            <input type="search" name="" id="buscar">
+        <br><br>
+        </div>
+
+        <div>
+            <label for="phone"></label> Telèfono
+            <input type="tel" name="" id="phone">
+        <br><br>
+        </div>
+
+        <div>
+            <label for="correo"></label> Email
+            <input type="email" name="" id="correo">
+        <br><br>
+        </div>
+
+        <div>
+            <label for="clave"></label> Contraseña
+            <input type="password" id="clave">
+        <br><br>
+        </div>
+
+        <div>
+            <label for="uri"></label> Url
+            <input type="url" name="" id="uri">
+        </div>
+    </form>
+    <br><hr>
+
+    <h2>inputs extra</h2>
+    <form>
+        <label for="colors">Color</label>
+        <input type="color" name="" id="colors">
+        <br><br>
+        <label for="numbers">Number</label>
+        <input type="number" name="" id="numbers">
+        <br><br>
+        <label for="ranges">Range</label>
+        <input type="range" step="5" min="0" max="30" id="ranges">
+        <br><br>
+        <label for="resets">Reset</label>
+        <input type="reset" name="" id="resets">
+        <br><br>
+        <label for="texts">Text</label>
+        <input type="text" name="" id="texts">
+    </form>
+    <br><hr>
+
+    <h2>inputs radio</h2>
+    <h4>Radio</h4>
+    <form>
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" value="male" id="Male">
+        <label for="Female">Female</label>
+        <input type="radio" name="gender" value="female" id="Female">
+        <label for="Nothing">Nothing</label>
+        <input type="radio" name="gender" value="nothing" id="Nothing" checked>
+    </form>
+    <br><hr>
+
+    <h2>input checkbox</h2>
+    <h4>Checkbox languages you know</h4>
+    <form>
+        <label for="html">HTML</label>
+        <input type="checkbox" name="language" id="html" value="html">
+        <label for="css">CSS</label>
+        <input type="checkbox" name="language" id="css" value="css">
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" name="language" id="javascript" value="javascript" checked>
+        <label for="php">PHP</label>
+        <input type="checkbox" name="language" id="php" value="php" checked>
+        <label for="go">Go</label>
+        <input type="checkbox" name="language" id="go" value="go" checked>
+    </form>
+    <br><hr>
+
+    <h2>select elements basic</h2>
+    <h4>lenguage</h4>
+    <form>
+        <select name="language">
+            <option value="html">HTML</option>
+            <option value="javascript">JavaScript</option>
+            <option value="golang">Golang</option>
+            <option value="css">Css</option>
+            <option value="php">PHP</option>
+        </select>
+    </form>
+    <br><hr>
+
+    <h2>select avanzado</h2>
+    <h4>Pet</h4>
+    <form>
+        <select name="pet">
+            <optgroup label="4 patas">
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="conejo">Conejo</option>
+            </optgroup>
+
+            <optgroup label="alas">
+                <option value="loro">Loro</option>
+                <option value="canario">Canario</option>
+            </optgroup>
+            
+            <optgroup label="otros">
+                <option value="paloma">Paloma</option>
+                <option value="tortuga">Tortuga</option>
+            </optgroup>
+        </select>
+    </form>
+    <br><hr>
+
+    <!-- datalist contine un filtro que nos permite hallar una busqueda en el input -->
+    <h2>data list new html5</h2>
+    <h4>browser</h4>
+    <form>
+        <label for="browser">Choose your browser from the list</label>
+        <input list="browsers" name="browser" id="browser">
+
+        <datalist id="browsers">
+            <option value="Edge"></option>
+            <option value="Firefox"></option>
+            <option value="Chrome"></option>
+            <option value="Brave"></option>
+            <option value="Opera"></option>
+            <option value="Safari"></option>
+        </datalist>
+        <input type="submit">
+    </form>
+    <br><hr>
+
+    <h2>fielset</h2>
+    <h4>data</h4>
+    <form>
+        <fieldset>
+            <legend>Personal data</legend>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name"><br><br>
+            <label for="first_name">First Name</label>
+            <input type="text" name="first_name" id="first_name">
+        </fieldset>
+
+        <label for="img">Image</label>
+        <input type="file" name="img" id="img"><br><br>
+
+        <label for="med">Meter (medida)</label>
+        <meter id="med" value="24" min="0" max="30" low="7" high="26" optimum="29">Meter progress ok</meter><br><br>
+         
+        <label for="file">Your progress</label>
+        <progress id="file" value="77" max="100">77</progress><br><br>
+
+        <label for="message">Your Message</label>
+        <textarea name="message" id="message" cols="20" rows="5"></textarea>
+     </form>
+    <br><hr>
+
+    <h2>Form attributes</h2>
+    <h4>examples</h4>
+    <form>
+        <input type="text" placeholder="Intruduce tu nombre" required><br><br>
+        <input type="text" value="readonly" readonly><br><br>
+        <input type="text" value="test disabled" disabled><br><br>
+
+        <label for="num">Number select</label>        
+        <select name="numbers" id="num">
+            <option value="one" id="num">One</option>
+            <option value="two" id="num">Two</option>
+            <option value="three" id="num">Three</option>
+            <option value="four" id="num" selected>Four</option>
+            <option value="five" id="num">Five</option>
+        </select>
+        <br><br>
+
+        <label for="numb">Number</label>
+        <input type="number" name="mynum" min="20" max="100" id="numb"><br><br>
+        <label for="name">Name</label>
+        <input type="text" name="name" minlength="4" maxlength="8" id="name" autofocus><br><br>
+        <input type="submit" value="come">
+    </form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Link index</title>
+    </head>
+    <body>
+        <!-- 
+            Links = conectan una pagina web con otra pagina web
+            con un recurso tanto interno o externo o con otro sitio web.
+
+            herf = especificamos la ruta del recurso o sitio que queremos obtener.
+
+            target = configura como queremos visualizar el recurso o sitio que solicitamos
+
+            Rutas absolutas:
+                tienen un protocolo http o https y son unicas en la red
+                se suele utilizar para rutas externas.
+            Rutas relativas:
+                pueden ser relativas al punto donde nos encontramos
+                o relativas a la raiz del proyecto.
+                No usan protocolo
+                si el recurso se encuentra en el mismo nivel (en la misma carpeta)
+                pondremos unicamente el nombre del archivo.
+
+                si necesitamos salir de la carpeta actual usaremos ../
+                y se pone uno por cada nivel (carpeta) de la que queremos salir.
+
+                download: atributo booleano sirve para descargar el recurso solicitado
+                IMPORTANTE: el recurso debe estar en tu mismo servidor
+        -->
+
+        <h1>Home</h1>
+        <a href="../assets/images/gato.jpeg" download>Descargar gato</a>
+        <br>
+        <a href="contact.html" download>Contact</a>
+        <br>
+        <a href="https://google.com" target="_blank">Go to google</a>
+        <br>
+        <a href="../practica-1.html">Go to page practice</a>
+    </body>
+</html>

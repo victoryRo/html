@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contenido Embebido</title>
+</head>
+    <!-- 
+        DPR (device pixel ratio) 
+            es la relacion que existe entre los pixeles reales que tiene el 
+            dispositivo y los pixeles que tenemos disponibles para "pintar" contenido
+
+        DPR = pixeles reales / pixeles disponibles
+    -->
+<body>
+    <h1>Contenido Embebido</h1>
+    <!-- <a href="https://whatismyviewport.com/">What is my viewport PAGE</a>
+    <hr> -->
+
+    <!-- <img src="/assets/images/women.jpeg" alt="bella" width="300"> -->
+    <hr>
+
+    <!-- 
+        attribute srcset
+            podemos elegir una imagen para ser mostradas
+            de acuerdo con el (device pixel ratio)
+            en moviles o escritorio 
+    -->
+
+    <!-- <img 
+        alt="two images" 
+        srcset="/assets/images/women.jpeg,
+                /assets/images/apple.png 2x"
+    > -->
+    <hr>
+
+    <picture>
+        <!-- <source 
+            srcset="/assets/images/women.jpeg,
+                    /assets/images/apple.png 2x"
+        > -->
+        <source media="(max-width:800px)" srcset="/assets/images/women.jpeg">
+        <img src="/assets/images/gato.jpeg" alt="gato">
+    </picture>
+</body>
+</html>

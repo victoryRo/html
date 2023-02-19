@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline element</title>
+    <style>
+        span {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Line elements</h1>
+    <!-- 
+       em    -> emphasis
+       strog -> mas enfasis
+       small -> menos enfasis que el texto normal
+       br    -> forzar un salto de linea
+       wbr   -> salto de linea si hiciera falta
+       time  -> para representar un contenido de hora fecha
+       i     -> italic    = design
+       b     -> bold      = design
+       u     -> underline = design
+       sup   -> superIndice
+       sub   -> subIndice
+    -->
+    <!-- 
+        span -> es un contenedor de linea, equivalente a <div></div>
+        se suele usar para encerrar palabras o pequeños textos y darles estilo 
+        a traves de CSS o localizarlos desde javascript.
+        semanticamente no significa nada
+
+        q -> es equivalente a <blockquote></blockquote>, significa quote,
+        por eso el bloque se llama block - quote. 
+        se usa para poner citas pero en linea.
+
+        code -> sirve para encerrar codigo que queremos representar
+        visualmente, suele ir unido con la etiqueta <pre></pre>
+
+        Entidades especiales en HTML - Còdigo ASCII
+        https://ascii.cl/es/codigos-html.htm
+    -->
+
+    <p>
+        <em>la vida es hermosa</em>
+        trae consigo cosas <strong>maravillosas</strong>
+        <small>buena noche</small>
+    </p>
+
+    <q cite="url">I am la presencia</q>
+
+    <pre>
+        <code>
+            function goodNight(hello) {
+                return `Ok have a nice ${hello}`;
+            }
+       </code>
+    </pre>
+
+    <p>la etiqueta <code>&#60;h1&#62;</code> se utiliza para representar titulos de primer nivel</p>
+    <!-- simbolo de copyright -->
+    <h4>&#169;</h4>
+
+    <p>
+        Lorem, ipsum dolor sit amet <span>Conciencia presente.</span> adipisicing elit.<br> 
+        Id obcaecati suscipit cupiditate accusantium sed eum ex velit consectetur<br> 
+        vero possimus expedita porro, placeat reprehenderit facere molestias ipsum. Saepe, asperiores optio.
+    </p>
+
+    <p>
+        http://127.0.0.1:5500/<wbr>cursos/<wbr>html/<wbr>elements/<wbr>line-elements.html
+    </p>
+
+    <time>24/10/2020 10:35</time>
+
+    <p>
+        <i>italic</i>
+        <b>bold</b>
+        <u>underline</u>
+    </p>
+
+    <p>
+        4 elevado al cuadrado se representa asi 4<sup>2</sup>
+    </p>
+
+    <p>
+        agua oxigenada tiene la formula H<sub>2</sub>0<sub>2</sub>
+    </p>
+
+</body>
+</html>

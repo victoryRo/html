@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List HTML</title>
+</head>
+<body>
+    <!-- 
+        Listas html
+        existen tres tipos de listas:
+
+        ul -> unordered list:  se utiliza cuando el orden de los elementos no influye (lista de compra)
+        ol -> ordered list:    se utiliza cuando el orden de los elementos es importante (top 10)
+        dl -> definition list: se utiliza para hacer una lista de definiciones (diccionario)
+
+        cada elemento de la lista se representa con la etiqueta <li> tanto en <ul> o <ol>
+        se pueden construir listas anidadas teniendo en uno de los <li> otro <ul>/<ol> segun sea necesario
+    -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#post-1">Post 1</a></li>
+                <li><a href="#post-2">Post 2</a></li>
+                <li><a href="#post-3">Post 3</a></li>
+                <li><a href="#post-4">Post 4</a></li>
+                <li><a href="#post-5">Post 5</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h2>Lista de acciones</h2>
+    <ul>
+       <li>meditar</li>
+       <li>caminar</li>
+       <li>disfrutar</li>
+    </ul>
+
+    <h2>Orden en el aprendizaje del desarrollo web</h2>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+    </ol>
+
+    <h2>Lenguajes para el desarrollo web</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>
+            Lenguaje de marcado de hyper texto: lenguaje de marcado para estructurar paginas web
+        </dd>
+        <dt>CSS</dt>
+        <dd>
+            Cascade style sheets: lenguaje de diseño para dar estilo al html
+        </dd>
+        <dt>Javascript</dt>
+        <dd>
+            lenguaje de programaciòn para dar interactividad a un sitio web
+        </dd>
+    </dl>
+
+    <!-- 
+        Atributos de listas
+        ol ->
+            type: estilo de numeracion (1, A, a, I, i)
+        ul ->
+            type: estilo de los items (disc, square, circle)
+    -->
+
+    <h2>Atributos de lista ul</h2>
+    <ul type="disc">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    
+    <ul type="square">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+    
+    <ul type="circle">
+        <li>Item</li>
+        <li>Item</li>
+        <li>Item</li>
+    </ul>
+
+    <h2>Atributos de lista ol</h2>
+    <ol type="a" start="10">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ol type="A" start="4">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ol type="i" start="7">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <ol type="I" start="3">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <h2>etiqueta ol > li anidando otra ol > li</h2>
+    <ol>
+        <li>
+            HTML
+            <ol>
+                <li>structur</li>
+                <li>syntax</li>
+                <li>tags</li>
+                <li>attributes</li>
+            </ol>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </li>
+    </ol>
+
+</body>
+</html>
